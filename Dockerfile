@@ -17,4 +17,4 @@ RUN yum install -y wget && \
     wget --no-check-certificate -c http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.0.M17/bin/apache-tomcat-9.0.0.M17.tar.gz && \
     tar xzf apache-tomcat-9.0.0.M17.tar.gz -C /opt/
 EXPOSE 8080
-CMD bash
+CMD ["catalina.sh", "run"]
