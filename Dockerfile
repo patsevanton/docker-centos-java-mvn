@@ -15,6 +15,8 @@ RUN yum install -y wget && \
     tar xzf apache-maven-3.3.9-bin.tar.gz -C /opt/ && \
     alternatives --install /usr/bin/mvn mvn /opt/apache-maven-3.3.9/bin/mvn 2 && \
     wget --no-check-certificate -c http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.0.M17/bin/apache-tomcat-9.0.0.M17.tar.gz && \
-    tar xzf apache-tomcat-9.0.0.M17.tar.gz -C /opt/
+    tar xzf apache-tomcat-9.0.0.M17.tar.gz -C /opt/ && \
+    yum install -y git && \
+    rm -f jdk-8u121-linux-x64.tar.gz apache-maven-3.3.9-bin.tar.gz apache-tomcat-9.0.0.M17.tar.gz
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
