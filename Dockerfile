@@ -1,7 +1,7 @@
 FROM centos:7
 ENV JAVA_HOME /opt/jdk1.8.0_191
 ENV M2_HOME /opt/apache-maven-3.3.9
-RUN yum install -y wget && \
+RUN yum install -y wget git && \
     wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" \
     https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz && \
     tar xzf jdk-8u191-linux-x64.tar.gz -C /opt/ && \
